@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users Table</title>
+</head>
+<body>
+    <table style="border: 2px solid black; border-collapse: collapse;">
+        <thead >
+            <th style="border: 2px solid black; border-collapse: collapse;">First Name</th>
+            <th style="border: 2px solid black; border-collapse: collapse;">Last Name</th>
+            <th style="border: 2px solid black; border-collapse: collapse;">Full Name</th>
+        </thead>
+        <tbody>
+            {% for user in users %}
+            <tr>
+                <td style="border: 2px solid black; border-collapse: collapse;">{{user['first_name']}}</td>
+                <td style="border: 2px solid black; border-collapse: collapse;">{{user['last_name']}}</td>
+                <td style="border: 2px solid black; border-collapse: collapse;">{{user['first_name']}} {{user['last_name']}}</td>
+            </tr>
+                {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
